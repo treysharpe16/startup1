@@ -49,14 +49,16 @@ nav {
 }
 
 .navTitle {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  /* padding-bottom: 10px;
+  padding-top: 10px */
   font-size: 20px;
   cursor: pointer;
 }
 /* WRAPPER SECTION STYLES */
 .wrapper {
-  padding-top: 50px;
+  padding-top: 1vh;
   display: flex;
   align-items: center;
   width: 100%;
@@ -75,11 +77,11 @@ body {
 .button {
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 2vw 4vw;
   text-align: center;
   text-decoration: none;
-  font-size: 35px;
-  margin: 30px 40px;
+  font-size: 2vw;
+  margin: 2vw 6vw;
   transition-duration: 0.4s;
 }
 
