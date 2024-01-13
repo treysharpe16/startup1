@@ -1,5 +1,5 @@
 <html lang="en">
-
+     <!-- Header stores all info to set up file. What css to reference. Which JS to reference -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,31 +12,33 @@
         <title>Mask Co.</title>
     </head>
     <body class = "snow">
+        <!-- Navigation Bar on top of page -->
         <nav id="nav">
             <div class="navTop">
                 <div class="navItem">
                 <a href="index.html"><image src="./img/logoex.png" href="index.html" height="100vh"></image> 
                 </div>
                 
-                <div class="navItem">
-                    <a href="index.html" class="limitedOffer">HOME</a>
-                    <a href="shop.html" class="limitedOffer">SHOP</a>
-                    <a href="blog.html" class="limitedOffer">BLOG</a>
+                <div class="navItem limitedOffer">
+                    <a href="index.html" class="navTitle">HOME</a>
+                    <a href="shop.html" class="navTitle">SHOP</a>
+                    <a href="blog.html" class="navTitle">BLOG</a>
                 </div>
             </div>
-        
         </nav>
+        <!-- Section with words and pictures -->
         <div class="wrapper">
-            <div class="sliderItem" style=" font-size: 75px;font-weight: 500;color: whitesmoke; text-align:right; font-family:Arial, Helvetica, sans-serif ;">
-                <h3 >INNOVATE<br> 
-                CREATE<br>
-                RIDE</h3>
+            <div class="wrapperItem" style=" font-size: 75px;font-weight: 500;color: whitesmoke; text-align:right; font-family:Arial, Helvetica, sans-serif ;">
+                <h3 >INNOVATE</h3>
+                <h3 >CREATE</h3>
+                <h3 >RIDE</h3>
             </div>   
-            <div class="sliderItem">
-                <img src="./img/Demo1.png" alt="snowy background" width="40%" justify-contect="Center" align="left">
-                <img src="./img/Demo2.png" alt="snowy background" width="46%" justify-contect="Center" align="left">
+            <div class="wrapperItem">
+                <img src="./img/Demo1.png" alt="snowy background" width="40%">
+                <img src="./img/Demo2.png" alt="snowy background" width="46%">
             </div>   
         </div>
+        <!-- Section with buttons -->
         <div class = "wrapper" style="justify-content: center;">
             <div style="text-align: center; padding-top:20px">
                 <button onclick="location.href='shop.html'" class="button button1">BUY NOW</button>
@@ -44,6 +46,7 @@
             </div>
         </div>
     </body>
+    <!-- Javascript -->
     <script>
         snowFall.snow(document.querySelector(".snow"), {
             round: true,
