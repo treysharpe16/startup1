@@ -1,6 +1,12 @@
 html {
     scroll-behavior: smooth;
   }
+
+  a { 
+    color: White; 
+    text-decoration: none; 
+    cursor: auto; 
+   } 
   
   body {
     font-family: "Lato", sans-serif;
