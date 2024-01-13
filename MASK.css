@@ -88,22 +88,22 @@ body {
 .button1 {
   background-color: rgb(10, 10, 10); 
   color: whitesmoke; 
-  border: 2px solid #04AA6D;
+  border: 2px solid #f8faf9;
 }
 
 .button1:hover {
-  background-color: #04AA6D;
+  background-color: #fafcfb;
   color: rgb(7, 7, 7);
 }
 
 .button2 {
   background-color: rgb(5, 5, 5); 
   color: whitesmoke; 
-  border: 2px solid #008CBA;
+  border: 2px solid #f5f8f9;
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color: #f2f5f7;
   color: rgb(7, 7, 7);
 }
 
