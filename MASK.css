@@ -437,11 +437,6 @@ padding-right: 25px;
     font-size: 14px;
   }
   
-  @media screen and (max-width:480px) {
-    nav{
-      padding: 20px;
-    }
-  
     .search{
       display: none;
     }
