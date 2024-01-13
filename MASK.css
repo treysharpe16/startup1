@@ -62,6 +62,7 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: center;
 }
 
 body {
@@ -72,6 +73,10 @@ body {
 .wrapperItem {
   width: 50vw;
   display: inline;
+}
+
+h3.wrapperItem {
+  margin-right: 1vw;
 }
 
 .button {
@@ -111,7 +116,6 @@ body {
   color: white;
   font-size: 32px;
   font-weight: 200;
-
 }
 
 /* Google Fonts  */
@@ -140,13 +144,15 @@ body {
     background-color: var(--main-color);
 }
 .container{
-    max-width: 1068px;
+    max-width: 1250px;
     margin: auto;
     width: 100%;
 }
 section{
-    padding: 4rem 0 3rem;
+    padding: 1rem 0 0;
 }
+
+
 /* body{
     color: var(--text-color);
 }
@@ -202,16 +208,19 @@ img{
     border: 1px solid var(--main-color);
     transition: 1.5s;
 }
+
 .cart.active{
     right: 0;
     transition: .5s;
 }
+
 .cart-title{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
 }
+
 .cart-box{
     display: grid;
     grid-template-columns: 32% 50% 18%;
@@ -219,12 +228,14 @@ img{
     gap: 1rem;
     margin-top: 1rem;
 }
+
 .cart-img{
     width: 100px;
     height: 100px;
     object-fit: contain;
     padding: 10px;
 }
+
 .detail-box{
     display: grid;
     row-gap: .5rem;
@@ -286,7 +297,7 @@ img{
 
 /* SHOP SECTION  */
 .shop{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .section-title{
     font-style: 1.5rem;
@@ -296,43 +307,50 @@ img{
 }
 .shop-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+    gap: 4rem;
 }
 .product-box{
     position: relative;
+    justify-content: center;
 }
 .product-box:hover{
-    padding: 10px;
-    border: 1px solid var(--text-color);
-    transition: .4s;
+  padding: 10px;
+  border: 2px solid white;
+  transition: .4s;
 }
 .product-img{
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    margin-bottom: .5rem;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-bottom: .5rem;
 }
 .product-title{
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
 }
+
 .product-price{
+  text-align: center;
+  color: white;
     font-weight: 500;
 }
 .add-cart{
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: black;
+    color: white;
     padding: 10px;
     cursor: pointer;
 }
 .add-cart:hover{
-    background-color: hsl(249, 32%, 17%);
+    background-color: white;
+    color: black;
 }
 
 
@@ -367,12 +385,12 @@ For Medium Devices
 }
 
 /* For Small Devices */
-@media (max-width: 360px){
+/* @media (max-width: 360px){
     .shop{
         margin-top: 1rem;
     }
     .cart{
         width: 280px;
     }
-} */
+}  */
 
