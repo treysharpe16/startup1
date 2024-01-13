@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- box icons  -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
             rel="stylesheet">
@@ -33,13 +35,45 @@
             </div>   
         </div>
         <!-- Section with buttons -->
-        <div class = "wrapper" style="justify-content: center;">
-            <div style="text-align: center; padding-top:20px">
-                <button onclick="location.href='shop.html'" class="button button1">BUY NOW</button>
-                <button onclick="location.href='blog.html'" class="button button2">BLOG</button>
+            <!-- SHOP SECTION  -->
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+
+        <!-- CONTENT  -->
+        <div class="shop-content">
+            <!-- BOX 1 -->
+            <div class="product-box">
+                <img src="./img/SkiMask1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Nike Shoes</h2>
+                <span class="product-price">$79.5</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- BOX 2 -->
+            <div class="product-box">
+                <img src="./img/skierhead.png" alt="" class="product-img">
+                <h2 class="product-title">BACKPACK</h2>
+                <span class="product-price">$59.5</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- BOX 3 -->
+            <div class="product-box">
+                <img src="./img/skierhead2.png" alt="" class="product-img">
+                <h2 class="product-title">METAL BOTTLE</h2>
+                <span class="product-price">$29.5</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- BOX 4 -->
+            <div class="product-box">
+                <img src="./img/SkiMAsk2.jpg" alt="" class="product-img">
+                <h2 class="product-title">METAL SUNGLASSES</h2>
+                <span class="product-price">$105</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
+    </section>
+
     </body>
+
     <!-- Javascript -->
     <script>
         snowFall.snow(document.querySelector(".snow"), {
