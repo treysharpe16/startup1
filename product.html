@@ -4,12 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- box icons  -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="MASK.css">
         <script src="MASK.js"></script>
-        <title>Mask Co.</title>
+        <title>Product Details Mask Co.</title>
     </head>
     <body class = "snow">
         <!-- Navigation Bar on top of page -->
@@ -23,28 +25,15 @@
                     <a href="index.html" class="navTitle">HOME</a>
                     <a href="shop.html" class="navTitle">SHOP</a>
                     <a href="blog.html" class="navTitle">BLOG</a>
-                    <a class="navTitle" id="cart-icon">Cart</a>
                 </div>
             </div>
         </nav>
-        <!-- Section with words and pictures -->
-        <div class="wrapper">
-            <div class="wrapperItem" style=" font-size: 6vw;font-weight: 500;color: whitesmoke; text-align:right; font-family:Arial, Helvetica, sans-serif ;">
-                <h3>INNOVATE</h3>
-                <h3 >CREATE</h3>
-                <h3 >RIDE</h3>
-            </div>   
-            <div class="wrapperItem">
-                <img src="./img/Cropped1.png" alt="snowy background" width="45%">
-                <img src="./img/Cropped2.png" alt="snowy background" width="35%">
-            </div>   
-        </div>
-        <!-- Section with buttons -->
-        <div class = "wrapper" style="justify-content: center;">
-            <div style="text-align: center; padding-top: 1vh">
-                <button onclick="location.href='shop.html'" class="button button1">BUY NOW</button>
-                <button onclick="location.href='blog.html'" class="button button2">BLOG</button>
-            </div>
+                
+        <div class="product-detail">
+            <img src="" alt="Product Image" id="productImage">
+            <h2 id="productName" class="product-title">Product Name</h2>
+            <p id="productPrice" class="product-title">Price</p>
+            <p id="productDescription">Description</p>
         </div>
         <!-- CART  -->
         <div class="cart">
@@ -79,3 +68,6 @@
         })
     </script>
 </html>
+
+
+

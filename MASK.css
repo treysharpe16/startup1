@@ -1,3 +1,7 @@
+/* Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
 html {
     scroll-behavior: smooth;
     cursor: url('./img/Cursor1.png'), auto;	
