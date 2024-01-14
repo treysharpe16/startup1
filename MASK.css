@@ -58,7 +58,7 @@ nav {
 }
 /* WRAPPER SECTION STYLES */
 .wrapper {
-  padding-top: 1vh;
+  padding-top: 6vh;
   display: flex;
   align-items: center;
   width: 100%;
@@ -149,7 +149,7 @@ h3.wrapperItem {
     width: 100%;
 }
 section{
-    padding: 1rem 0 0;
+    padding: 1rem 0 2rem;
 }
 
 
