@@ -11,6 +11,7 @@
         <script src="MASK.js"></script>
         <title>Mask Co.</title>
     </head>
+
     <body class = "snow">
         <!-- Navigation Bar on top of page -->
         <nav id="nav">
@@ -28,25 +29,21 @@
             </div>
         </nav>
         <div>       
-            <h2>Responsive Checkout Form</h2>
-            <p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
             <div class="row snow">
-            <div class="col-75 snow">
-                <div class="container">
+            <div class="col-60">
+                <div class="container1">
                 <form action="/action_page.php">
-                
                     <div class="row">
-                    <div class="col-50">
-                        <h3>Billing Address</h3>
-                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                        <input type="text" id="email" name="email" placeholder="john@example.com">
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                        <label for="city"><i class="fa fa-institution"></i> City</label>
-                        <input type="text" id="city" name="city" placeholder="New York">
-
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                            <input type="text" id="city" name="city" placeholder="New York">
                         <div class="row">
                         <div class="col-50">
                             <label for="state">State</label>
@@ -58,15 +55,14 @@
                         </div>
                         </div>
                     </div>
-
                     <div class="col-50">
                         <h3>Payment</h3>
                         <label for="fname">Accepted Cards</label>
                         <div class="icon-container">
-                        <i class="fa fa-cc-visa" style="color:navy;"></i>
-                        <i class="fa fa-cc-amex" style="color:blue;"></i>
-                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
                         </div>
                         <label for="cname">Name on Card</label>
                         <input type="text" id="cname" name="cardname" placeholder="John More Doe">
@@ -85,16 +81,15 @@
                         </div>
                         </div>
                     </div>
-                    
-                    </div>
-                    <label>
-                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </div>
+                    <label  style="font-size:30px" >
+                    <input type="checkbox"  checked="checked" name="sameadr"> Shipping address same as billing
                     </label>
-                    <input type="submit" value="Continue to checkout" class="btn">
+                    <input type="submit" style="font-size:30px" value="Continue to checkout" class="btn">
                 </form>
                 </div>
             </div>
-            <div class="col-25">
+            <div class="col-40">
                 <div class="container">
                 <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
                 <p><a href="#">Product 1</a> <span class="price">$15</span></p>
@@ -108,4 +103,15 @@
         </div>
         </div>
 </body>
+    <!-- Javascript -->
+    <script>
+        snowFall.snow(document.querySelector(".snow"), {
+            round: true,
+            minSize:1,
+            maxSize: 6,
+            shadow: true,
+            flakeCount: 150,
+            flakeColor: "#c7dfea",
+        })
+    </script>
 </html>

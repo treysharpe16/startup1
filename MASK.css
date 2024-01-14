@@ -398,9 +398,9 @@ For Medium Devices
     }
 }  */
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -410,9 +410,9 @@ For Medium Devices
   margin: 0 -16px;
 }
 
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+.col-40 {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
 }
 
 .col-50 {
@@ -420,25 +420,29 @@ For Medium Devices
   flex: 50%;
 }
 
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
+.col-60 {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
 }
 
-.col-25,
+.col-40,
 .col-50,
-.col-75 {
+.col-60 {
   padding: 0 16px;
 }
 
-.container {
+ .container1 {
   background-color: #050505;
-  padding: 5px 20px 15px 20px;
+  padding: 20px 50px 20px 50px;
+  margin-left: 300px;
+  margin-right: 300px;
   border: 1px solid lightgrey;
   border-radius: 3px;
+  font-size: 35px;
 }
 
 input[type=text] {
+  font-size: 30px;
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -449,6 +453,8 @@ input[type=text] {
 label {
   color:white;
   margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   display: block;
 }
 
@@ -458,7 +464,7 @@ label {
   font-size: 24px;
 }
 
-.btn {
+/* .btn {
   background-color: #04AA6D;
   color: white;
   padding: 12px;
@@ -472,11 +478,11 @@ label {
 
 .btn:hover {
   background-color: #0813e7;
-}
+} */
 
-a {
+/* a {
   color: #2196F3;
-}
+} */
 
 hr {
   border: 1px solid lightgrey;
