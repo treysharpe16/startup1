@@ -12,21 +12,43 @@
         <title>Mask Co.</title>
     </head>
     <body class = "snow">
-        <!-- Navigation Bar on top of page -->
-        <nav id="nav">
-            <div class="navTop">
-                <div class="navItem">
-                <a href="index.html"><image src="./img/logoex.png" href="index.html" height="100vh"></image> 
+        <!-- Header -->
+        <Header>
+            <!-- Navigation Bar on top of page -->
+            <nav id="nav">
+                <div class="navTop">
+                    <div class="navItem">
+                    <a href="index.html"><image src="./img/logoex.png" href="index.html" height="100vh"></image> 
+                    </div>
+                    
+                    <div class="navItem">
+                        <a href="index.html" class="navTitle">HOME</a>
+                        <a href="shop.html" class="navTitle">SHOP</a>
+                        <a href="blog.html" class="navTitle">BLOG</a>
+                        <a class="navTitle" id="cart-icon">Cart</a>
+                    </div>
                 </div>
-                
-                <div class="navItem">
-                    <a href="index.html" class="navTitle">HOME</a>
-                    <a href="shop.html" class="navTitle">SHOP</a>
-                    <a href="blog.html" class="navTitle">BLOG</a>
-                    <a class="navTitle" id="cart-icon">Cart</a>
+            </nav>
+            <!-- CART  -->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+
+                <!-- CONTENT  -->
+                <div class="cart-content">
+
                 </div>
+
+                <!-- TOTAL   -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <!-- BUY BUTTON  -->
+                <button type="button" class="btn-buy">Buy Now</button>
+                <!-- CART CLOSE  -->
+                <i class='bx bx-x' id="cart-close"></i>
             </div>
-        </nav>
+        </Header>
         <!-- Section with words and pictures -->
         <div class="wrapper">
             <div class="wrapperItem" style=" font-size: 6vw;font-weight: 500;color: whitesmoke; text-align:right; font-family:Arial, Helvetica, sans-serif ;">
@@ -46,26 +68,6 @@
                 <button onclick="location.href='blog.html'" class="button button2">BLOG</button>
             </div>
         </div>
-        <!-- CART  -->
-        <div class="cart">
-            <h2 class="cart-title">Your Cart</h2>
-
-            <!-- CONTENT  -->
-            <div class="cart-content">
-
-
-            </div>
-
-            <!-- TOTAL   -->
-            <div class="total">
-                <div class="total-title">Total</div>
-                <div class="total-price">$0</div>
-            </div>
-            <!-- BUY BUTTON  -->
-            <button type="button" class="btn-buy">Buy Now</button>
-            <!-- CART CLOSE  -->
-            <i class='bx bx-x' id="cart-close"></i>
-        </div>
     </body>
     <!-- Javascript -->
     <script>
@@ -77,5 +79,9 @@
             flakeCount: 150,
             flakeColor: "#c7dfea",
         })
+        
+        cartIcon.addEventListener("click", () => {
+        cart.classList.add("active");
+        });
     </script>
 </html>
