@@ -500,3 +500,34 @@ function CartBoxComponent(title, price, imgSrc) {
         <i class='bx bxs-trash-alt cart-remove'></i>
     </div>`;
 }
+
+const products = [
+  {
+   id: 0,
+   name: 'Black Mask & White Goggles',
+   price: 80.00,
+   image: "./img/Mask1.png",
+  },
+  {
+    id: 2,
+    name: 'Black Mask & Purple Goggles',
+    price: 80.00,
+    image: "./img/Mask2.png",
+   },
+];
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const productId = params.get('id');
+  
+  // Example: Fetch product data based on productId
+  // Replace with your method of fetching product data
+  const productData = products[productId];
+
+  // Update page content
+  document.getElementById('productImage').src = productData.image;
+  document.getElementById('productName').textContent = String(productId);
+  document.getElementById('productPrice').textContent = productData.price;
+  // document.getElementById('productDescription').textContent = productData.description;
+});
