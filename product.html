@@ -1,6 +1,7 @@
 <html lang="en">
      <!-- Header stores all info to set up file. What css to reference. Which JS to reference -->
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,33 +53,31 @@
             </div>
         </Header>
                 
-        <div class="product-detail">
-            <img src="./img/Mask1.png" alt="Product Image" id="productImage" style="width:25vw">
-            <img src="./img/Mask1-side.png" alt="Product Image" id="productImage" style="width:25vw">
-            <h2 id="productName" class="product-title">Product Name</h2>
-            <p id="productPrice" class="product-title">Price</p>
-            <p id="productDescription">Description</p>
-        </div>
-        <!-- CART  -->
-        <div class="cart">
-            <h2 class="cart-title">Your Cart</h2>
-
-            <!-- CONTENT  -->
-            <div class="cart-content">
-
-
+        <div class="product-detail" style=" display: flex; padding-top: 100px ; padding-left: 50px">
+            <div style="width:60%">
+                <img src="./img/Mask1.png" alt="Product Image" id="productImage" style="width: 28vw">
+                <img src="./img/Mask1-side.png" alt="Product Image" id="productImage" style="width: 28vw">
             </div>
+            <div style="width:40% ; text-align: left;">
+                <h2 id="productName" class="product-title">MASK + LENSE COMBO</h2> 
+                
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p id="productPrice" class="product-title ; margin-top: 50px">COLOR:</p>
 
-            <!-- TOTAL   -->
-            <div class="total">
-                <div class="total-title">Total</div>
-                <div class="total-price">$0</div>
+                <button class="product-button1">RED</button>
+                <button class="product-button2">BLUE</button>
+                <button class="product-button3">GREEN</button>
+                <button class="product-button4">ORANGE</button>
+                <button class="product-button5">PURPLE</button>
+
+                <p id="productPrice" class="product-title">Price: $79.99</p>
+                <p id="productDescription">Description</p>
             </div>
-            <!-- BUY BUTTON  -->
-            <button type="button" class="btn-buy">Buy Now</button>
-            <!-- CART CLOSE  -->
-            <i class='bx bx-x' id="cart-close"></i>
-        </div>
+        </div> 
     </body>
     <!-- Javascript -->
     <script src="MASK.js"></script>

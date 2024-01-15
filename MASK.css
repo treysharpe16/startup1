@@ -312,7 +312,7 @@ img{
     gap: 4rem;
 }
 .product-detail {
-  justify-content: center;
+  justify-content: left;
 }
 .product-box{
     position: relative;
@@ -330,12 +330,18 @@ img{
   margin-bottom: .5rem;
 }
 .product-title{
-  text-align: center;
+  text-align: left;
   color: white;
-  font-size: 0.8rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: .5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.checked {
+  color: orange;
 }
 
 .product-price{
@@ -501,5 +507,18 @@ span.price {
   .col-25 {
     margin-bottom: 20px;
   }
+}
+
+.product-button {
+  background-color: #f7f9f8; 
+  border: none;
+  color: rgb(5, 5, 5);
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 8px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
