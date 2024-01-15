@@ -26,24 +26,33 @@
                         <a href="index.html" class="navTitle">HOME</a>
                         <a href="shop.html" class="navTitle">SHOP</a>
                         <a href="blog.html" class="navTitle">BLOG</a>
-                        <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                        <i class='bx bx-shopping-bag navTitle' id="cart-icon"></i>
                     </div>
                 </div>
             </nav>
             <!-- CART  -->
-            <div class="cart">
+            <div class="cart active">
                 <h2 class="cart-title">Shopping Bag</h2>
                 <!-- CONTENT  -->
                 <div class="cart-content">
-                    <img src="./img/Mask1.png" width="160vw">
-                    <h2 class="product-title">Black Mask & White Goggles</h2>
-                    <p class="product-price">$80</p>
+                    <div style="width:30vw">
+                        <img src="./img/Mask1.png" width="100%">
+                    </div>
+                    <div style="width:70vw">
+                        <p class="cart-product">Black Mask & White Goggles</p>
+                        <p class="cart-product">$80</p>
+                        <form action="/action_page.php"  style="size:3">
+                            <input type="number" id="quantity" name="quantity" maxlength = 3 placeholder="1"><br></br>
+                        </form>
+                        <i class='bx bx-trash'></i>
+
+                    </div>
                 </div>
 
                 <!-- TOTAL   -->
                 <div class="total">
                     <div class="total-title">Total</div>
-                    <div class="total-price">$80</div>
+                    <div class="total-price">1 for $80</div>
                 </div>
                 <!-- BUY BUTTON  -->
                 <button type="button" class="btn-buy">Buy Now</button>
