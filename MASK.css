@@ -181,16 +181,7 @@ img{
     justify-content: space-between;
     padding: 20px 0;
 } */
-.logo{
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--sec-color);
-    text-transform: uppercase;
-}
-.logo span{
-    color: var(--main-color);
-    font-weight: 700;
-}
+
 #cart-icon{
     font-size: 1.8rem;
     cursor: pointer;
@@ -202,14 +193,14 @@ img{
     top: 0;
     right: 0;
     right: -100%; 
-    width: 360px;
-    height: 80vh;
+    width: 30vw;
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 20px;
-    background-color: var(--bg-color);
+    background-color: black;
     box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
-    border: 1px solid var(--main-color);
+    border: 1px solid white;
     transition: 1.5s;
 }
 
@@ -223,6 +214,7 @@ img{
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
+    color: white;
 }
 
 .cart-box{
@@ -243,6 +235,10 @@ img{
 .detail-box{
     display: grid;
     row-gap: .5rem;
+}
+.cart-content{
+  justify-content: center;
+  padding-left: "50vw";
 }
 .cart-product-title{
     font-size: 1rem;
@@ -267,22 +263,24 @@ img{
     display: flex;
     justify-content: flex-end;
     margin-top: 1.5rem;
-    border-top: 1px solid var(--text-color);
+    border-top: 1px solid white;
 }
 .total-title{
     font-size: 1rem;
     font-weight: 600;
+    color: white;
 }
 .total-price{
     margin-left: .5rem;
+    color: white;
 }
 .btn-buy{
     display: flex;
     margin: 1.5rem auto 0 auto;
     padding: 12px 20px;
     border: none;
-    background-color: var(--sec-color);
-    color: var(--bg-color);
+    background-color: white;
+    color: black;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -313,6 +311,9 @@ img{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, auto));
     gap: 4rem;
+}
+.product-detail {
+  justify-content: center;
 }
 .product-box{
     position: relative;
@@ -359,7 +360,7 @@ img{
 
 
 /* ================ RESPONSIVE & BREAKPOINTS ============= */
-/* @media (max-width: 1080px){
+@media (max-width: 1080px){
     .nav{
         padding: 15px;
     }
@@ -375,7 +376,7 @@ img{
     }
 }
 
-For Medium Devices
+/* For Medium Devices */
 @media (max-width: 400px){
     .nav{
         padding: 11px;
@@ -384,19 +385,19 @@ For Medium Devices
         font-size: 1rem;
     }
     .cart{
-        width: 320px;
+        width: 80vw;
     }
 }
 
 /* For Small Devices */
-/* @media (max-width: 360px){
+@media (max-width: 360px){
     .shop{
         margin-top: 1rem;
     }
     .cart{
-        width: 280px;
+        width: 75vw;
     }
-}  */
+} 
 
 /* * {
   box-sizing: border-box;
