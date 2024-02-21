@@ -25,47 +25,20 @@
                     <div class="navItem">
                         <a href="index.html" class="navTitle">HOME</a>
                         <a href="shop.html" class="navTitle">SHOP</a>
-                        <a href="blog.html" class="navTitle">BLOG</a>
+                        <a href="blog.html" class="navTitle">CONTENT</a>
                         <i class='bx bx-shopping-bag navTitle' id="cart-icon"></i>
                     </div>
                 </div>
             </nav>
+
             <!-- CART  -->
             <div class="cart">
                 <h2 class="cart-title">Shopping Bag</h2>
                 <!-- CONTENT  -->
-                <div class="cart-content">
-                    <div style="width:30vw">
-                        <img src="./img/Mask1.png" width="100%">
-                    </div>
-                    <div style="width:70vw">
-                        <p class="cart-product">Black Mask & White Goggles</p>
-                        <p class="cart-product">$80</p>
-                        <form action="/action_page.php"  style="size:3">
-                            <input type="number" id="quantity" name="quantity" maxlength = 3 placeholder="1"><br></br>
-                        </form>
-                        <i class='bx bx-trash'></i>
+                <div id="cart-items"></div>
 
-                    </div>
-                </div>
-
-                <!-- TOTAL   -->
-                <div class="total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">1 for $80</div>
-                </div>
                 <!-- BUY BUTTON  -->
-                <h1>Purchase your new kit</h1>
-                <!-- Paste your embed code script here. -->
-                <script
-                    async
-                    src="https://js.stripe.com/v3/buy-button.js">
-                </script>
-                <stripe-buy-button
-                    buy-button-id='{{BUY_BUTTON_ID}}'
-                    publishable-key="pk_test_51JSMZFB4WfHejuVb9NstRUCRoFSPPvJGoBa0RvweJ14Bm4to4bArZS1MfGjaDAW40wAEiNoCuRUXm2t0MIU5RXuH00RCG5Fjx1"
-                >
-                </stripe-buy-button>
+                <button type="button" class="btn-buy">Buy Now</button>
                 <!-- CART CLOSE  -->
                 <i class='bx bx-x' id="cart-close" style="color:white"></i>
             </div>
@@ -90,17 +63,12 @@
             </div>
         </div>
 
-        <nav id="nav">
-            <div class="navTop">
+        <nav id="footer">
+            <div class="footerTop">
                 <div class="navItem">
-                <a href="index.html"><image src="./img/logoex.png" href="index.html" height="100vh"></image> 
-                </div>
-                
-                <div class="navItem">
-                    <a href="index.html" class="navTitle">HOME</a>
-                    <a href="shop.html" class="navTitle">SHOP</a>
-                    <a href="blog.html" class="navTitle">BLOG</a>
-                    <i class='bx bx-shopping-bag navTitle' id="cart-icon"></i>
+                    <a href="index.html" class="navTitle">Contact Us</a>
+                    <a href="shop.html" class="navTitle">FAQ</a>
+                    <a href="blog.html" class="navTitle">Orders</a>
                 </div>
             </div>
         </nav>
@@ -108,4 +76,7 @@
     </body>
     <!-- Javascript -->
     <script src="MASK.js"></script>
+    <script src="checkout.js"></script>
+    <script src="cartUpdate.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </html>

@@ -35,50 +35,44 @@
             <div class="cart">
                 <h2 class="cart-title">Shopping Bag</h2>
                 <!-- CONTENT  -->
-                <div class="cart-content">
-                    <img src="./img/Mask1.png" width="160vw">
-                    <h2 class="product-title">Black Mask & White Goggles</h2>
-                    <p class="product-price">$80</p>
-                </div>
+                <div id="cart-items"></div>
 
-                <!-- TOTAL   -->
-                <div class="total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">$80</div>
-                </div>
                 <!-- BUY BUTTON  -->
                 <button type="button" class="btn-buy">Buy Now</button>
                 <!-- CART CLOSE  -->
                 <i class='bx bx-x' id="cart-close" style="color:white"></i>
             </div>
         </Header>
-                
-        <div class="product-detail" style=" display: flex; padding-top: 100px ; padding-left: 50px">
+        
+        <!--- BODY -->
+        <div class="product-detail" id="product" style=" display: flex; padding-top: 100px ; padding-left: 50px">
             <div style="width:60%">
-                <img src="./img/Mask1.png" alt="Product Image" id="productImage" style="width: 28vw">
-                <img src="./img/Mask1-side.png" alt="Product Image" id="productImage" style="width: 28vw">
+                <img src="" alt="Product Image" id="product-image1" style="width: 28vw">
+                <img src="" alt="Product Image" id="product-image2" style="width: 28vw">
             </div>
             <div style="width:40% ; text-align: left;">
-                <h2 id="productName" class="product-title">MASK + LENSE COMBO</h2> 
+                <h2 id="product-name" class="product-title">MASK + LENSE COMBO</h2> 
                 
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <p id="productPrice" class="product-title ; margin-top: 50px">COLOR:</p>
 
+                <!-- <p class="product-title" style="font-size:20px" >COLOR:</p>
                 <button class="product-button1">RED</button>
                 <button class="product-button2">BLUE</button>
                 <button class="product-button3">GREEN</button>
                 <button class="product-button4">ORANGE</button>
-                <button class="product-button5">PURPLE</button>
+                <button class="product-button5">PURPLE</button> -->
 
-                <p id="productPrice" class="product-title">Price: $79.99</p>
-                <p id="productDescription">Description</p>
+                <button class="purchase-button" id="add-to-cart"></button>
+                <p class="product-detail" style="padding-top:20px" id="product-description"></p>
             </div>
         </div> 
     </body>
     <!-- Javascript -->
     <script src="MASK.js"></script>
+    <script src="cartUpdate.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </html>

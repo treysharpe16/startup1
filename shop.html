@@ -34,17 +34,8 @@
             <div class="cart">
                 <h2 class="cart-title">Shopping Bag</h2>
                 <!-- CONTENT  -->
-                <div class="cart-content">
-                    <img src="./img/Mask1.png" width="160vw">
-                    <h2 class="product-title">Black Mask & White Goggles</h2>
-                    <p class="product-price">$80</p>
-                </div>
+                <div id="cart-items"></div>
 
-                <!-- TOTAL   -->
-                <div class="total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">$80</div>
-                </div>
                 <!-- BUY BUTTON  -->
                 <button type="button" class="btn-buy">Buy Now</button>
                 <!-- CART CLOSE  -->
@@ -62,7 +53,7 @@
             <!-- CONTENT  -->
             <div class="shop-content">
                 <!-- BOX 1 -->
-                <a href="product.html?id=0">
+                <a href="product.html?productName=ExampleProduct">
                     <div class="product-box">
                         <img src="./img/Mask1.png" alt="" class="product-img">
                         <h2 class="product-title">Black Mask & White Goggles</h2>
@@ -71,7 +62,7 @@
                     </div>
                 </a>
                 <!-- BOX 2 -->
-                <a href="product.html?id=2">
+                <a href="product.html?productName=GreyMask">
                     <div class="product-box">
                         <img src="./img/Mask2.png" alt="" class="product-img">
                         <h2 class="product-title">Black Mask & Purple Goggles</h2>
@@ -123,29 +114,10 @@
                 </div>
             </div>
         </section>
-        <!-- CART  -->
-        <div class="cart">
-            <h2 class="cart-title">Your Cart</h2>
-
-            <!-- CONTENT  -->
-            <div class="cart-content">
-
-
-            </div>
-
-            <!-- TOTAL   -->
-            <div class="total">
-                <div class="total-title">Total</div>
-                <div class="total-price">$0</div>
-            </div>
-            <!-- BUY BUTTON  -->
-            <button type="button" class="btn-buy">Buy Now</button>
-            <!-- CART CLOSE  -->
-            <i class='bx bx-x' id="cart-close"></i>
-        </div>
-
     </body>
 
     <!-- Javascript -->
     <script src="MASK.js"></script>
+    <script src="cartUpdate.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </html>

@@ -210,49 +210,49 @@ console.log("cart")
     });
   }
 
-// Start when the document is ready
-if (document.readyState == "loading") {
-  document.addEventListener("DOMContentLoaded", start);
-} else {
-  start();
-}
+// // Start when the document is ready
+// if (document.readyState == "loading") {
+//   document.addEventListener("DOMContentLoaded", start);
+// } else {
+//   start();
+// }
 
 // =============== START ====================
-function start() {
-  addEvents();
-}
+// function start() {
+//   addEvents();
+// }
 
-// ============= UPDATE & RERENDER ===========
-function update() {
-  addEvents();
-  updateTotal();
-}
+// // ============= UPDATE & RERENDER ===========
+// function update() {
+//   addEvents();
+//   updateTotal();
+// }
 
 // =============== ADD EVENTS ===============
-function addEvents() {
-  // Remove items from cart
-  let cartRemove_btns = document.querySelectorAll(".cart-remove");
-  console.log(cartRemove_btns);
-  cartRemove_btns.forEach((btn) => {
-    btn.addEventListener("click", handle_removeCartItem);
-  });
+// function addEvents() {
+//   // Remove items from cart
+//   let cartRemove_btns = document.querySelectorAll(".cart-remove");
+//   console.log(cartRemove_btns);
+//   cartRemove_btns.forEach((btn) => {
+//     btn.addEventListener("click", handle_removeCartItem);
+//   });
 
-  // Change item quantity
-  let cartQuantity_inputs = document.querySelectorAll(".cart-quantity");
-  cartQuantity_inputs.forEach((input) => {
-    input.addEventListener("change", handle_changeItemQuantity);
-  });
+//   // Change item quantity
+//   let cartQuantity_inputs = document.querySelectorAll(".cart-quantity");
+//   cartQuantity_inputs.forEach((input) => {
+//     input.addEventListener("change", handle_changeItemQuantity);
+//   });
 
-  // Add item to cart
-  let addCart_btns = document.querySelectorAll(".add-cart");
-  addCart_btns.forEach((btn) => {
-    btn.addEventListener("click", handle_addCartItem);
-  });
+//   // Add item to cart
+//   let addCart_btns = document.querySelectorAll(".add-cart");
+//   addCart_btns.forEach((btn) => {
+//     btn.addEventListener("click", handle_addCartItem);
+//   });
 
-  // Buy Order
-  const buy_btn = document.querySelector(".btn-buy");
-  buy_btn.addEventListener("click", handle_buyOrder);
-}
+//   // Buy Order
+//   const buy_btn = document.querySelector(".btn-buy");
+//   buy_btn.addEventListener("click", handle_buyOrder);
+// }
 
 // ============= HANDLE EVENTS FUNCTIONS =============
 let itemsAdded = [];
@@ -356,20 +356,20 @@ function CartBoxComponent(title, price, imgSrc) {
     </div>`;
 }
 
-const products = [
-  {
-   id: 0,
-   name: 'Black Mask & White Goggles',
-   price: 80.00,
-   image: "./img/Mask1.png",
-  },
-  {
-    id: 2,
-    name: 'Black Mask & Purple Goggles',
-    price: 80.00,
-    image: "./img/Mask2.png",
-   },
-];
+// const products = [
+//   {
+//    id: 0,
+//    name: 'Black Mask & White Goggles',
+//    price: 80.00,
+//    image: "./img/Mask1.png",
+//   },
+//   {
+//     id: 2,
+//     name: 'Black Mask & Purple Goggles',
+//     price: 80.00,
+//     image: "./img/Mask2.png",
+//    },
+// ];
 
 
 
@@ -399,3 +399,128 @@ snowFall.snow(document.querySelector(".snow"), {
   flakeCount: 150,
   flakeColor: "#c7dfea",
 })
+
+
+// 
+// 
+// 
+
+class Product {
+  constructor(name, image1, image2, price, description) {
+      this.name = name;
+      this.image1 = image1;
+      this.image2 = image2;
+      this.price = price;
+      this.description = description;
+  }
+
+  displayProduct() {
+      document.getElementById('product-name').textContent = this.name;
+      document.getElementById('product-image1').src = this.image1;
+      document.getElementById('product-image2').src = this.image2;
+      // document.getElementById('product-image').alt = this.name + ' Image';
+      document.getElementById('add-to-cart').textContent = `Add to Cart: $${this.price}`;
+      document.getElementById('product-description').textContent = this.description;
+  }
+}
+
+// Function to parse URL query parameters
+function getQueryParams() {
+  const queryParams = {};
+  const queryStrings = window.location.search.substring(1).split('&');
+  for (const queryString of queryStrings) {
+      const [key, value] = queryString.split('=');
+      queryParams[key] = decodeURIComponent(value);
+  }
+  return queryParams;
+}
+
+// Example product data, ideally this should come from a database or JSON file
+const products = {
+  ExampleProduct: new Product(
+      'Example Product',
+      'img/Mask1.png',
+      'img/Mask2.png',  // Update the path to your product image
+      '99.99',
+      'This is a great product with many features. Get it now!'
+  ),
+  GreyMask: new Product(
+    'GRey Mask',
+    'img/Mask3.png',
+    'img/Mask4.png',  // Update the path to your product image
+    '39.99',
+    'This is a great product with many features. Get it now!'
+)
+  // Add more products as needed
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  const queryParams = getQueryParams();
+  const productName = queryParams.productName;
+  if (products[productName]) {
+      products[productName].displayProduct();
+  } else {
+      // Handle case where product is not found
+      console.error('Product not found');
+  }
+});
+
+// Continuing from the previous example...
+
+document.getElementById('add-to-cart').addEventListener('click', function() {
+  const productName = getQueryParams().productName;
+  const product = products[productName];
+  if (product) {
+      addToCart(product);
+  } else {
+      alert('Error adding product to cart.');
+  }
+});
+
+function addToCart(product) {
+  let cart = localStorage.getItem('shoppingCart');
+  cart = cart ? JSON.parse(cart) : {};
+  
+  if (cart[product.name]) {
+      cart[product.name].quantity += 1; // Increment quantity if product already exists
+  } else {
+      // Add new product to cart
+      cart[product.name] = {...product, quantity: 1};
+  }
+  
+  localStorage.setItem('shoppingCart', JSON.stringify(cart));
+  alert(`${product.name} added to cart.`);
+}
+
+// function displayCart() {
+//   const cart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
+//   const cartContainer = document.getElementById('cart-items');
+//   let totalCost = 0;
+
+//   cartContainer.innerHTML = ''; // Clear existing cart items
+  
+//   Object.keys(cart).forEach(key => {
+//       const item = cart[key];
+//       const itemCost = item.price * item.quantity;
+//       totalCost += itemCost; // Add item cost to total cost
+
+//       cartContainer.innerHTML += `
+//           <div class="cart-item">
+//             <img src="${item.image1}" width="160vw">
+//               <h2 class="product-title">${item.name}</h2>
+//               <p>Price: $${item.price}</p>
+//               <p>Quantity: ${item.quantity}</p>
+//           </div>
+//           `;
+//       });
+  
+//   // Display total cost
+//   cartContainer.innerHTML += `
+//       <div class="cart-total">
+//         <h2 class="product-title">Total Cost: $${totalCost.toFixed(2)}</h3>
+//       </div>
+//   `;
+//   }
+
+// document.addEventListener('DOMContentLoaded', displayCart);
+
