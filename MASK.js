@@ -489,7 +489,8 @@ function addToCart(product) {
   }
   
   localStorage.setItem('shoppingCart', JSON.stringify(cart));
-  alert(`${product.name} added to cart.`);
+  updateCartDisplay(); // Refresh the cart display
+  document.querySelector(".cart").classList.add("active");
 }
 
 // function displayCart() {

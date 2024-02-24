@@ -1,4 +1,4 @@
-function displayCart() {
+function updateCartDisplay() {
   const cart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
   const cartContainer = document.getElementById('cart-items');
   let totalCost = 0;
@@ -66,4 +66,4 @@ function deleteItem(productName) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', displayCart);
+document.addEventListener('DOMContentLoaded', updateCartDisplay);
