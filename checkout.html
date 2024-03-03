@@ -1,6 +1,7 @@
 <html lang="en">
      <!-- Header stores all info to set up file. What css to reference. Which JS to reference -->
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="MASK.css">
-        <title>Mask Co.</title>
+        <title>Product Details Mask Co.</title>
     </head>
     <body class = "snow">
         <!-- Header -->
@@ -19,18 +20,17 @@
             <nav id="nav">
                 <div class="navTop">
                     <div class="navItem">
-                    <image class="navImage" src="./img/logoex.png" href="index.html"></image> 
+                    <a href="index.html"><image src="./img/logoex.png" href="index.html" height="100vh"></image> 
                     </div>
                     
                     <div class="navItem">
                         <a href="index.html" class="navTitle">HOME</a>
                         <a href="shop.html" class="navTitle">SHOP</a>
-                        <a href="blog.html" class="navTitle">CONTENT</a>
-                        <i class='bx bx-shopping-bag navTitle' id="cart-icon"></i>
+                        <a href="blog.html" class="navTitle">BLOG</a>
+                        <i class='bx bx-shopping-bag' id="cart-icon"></i>
                     </div>
                 </div>
             </nav>
-
             <!-- CART  -->
             <div class="cart">
                 <h2 class="cart-title">Shopping Bag</h2>
@@ -43,41 +43,51 @@
                 <i class='bx bx-x' id="cart-close" style="color:white"></i>
             </div>
         </Header>
-        <!-- Section with words and pictures -->
-        <div class="index-body">
-            <div class="wrapper">
-                <div class="wrapperItem">
-                    <h3>INNOVATE</h3>
-                    <h3 >STYLE</h3>
-                    <h3 >RIDE</h3>
-                </div>   
-                <div class="wrapperItem" style="padding-right:10%">
-                    <img src="./img/Cropped1.png" alt="snowy background" width="45%">
-                    <img src="./img/Cropped2.png" alt="snowy background" width="35%">
-                </div>   
+    <title>Checkout</title>
+    <style>
+        /* Basic styling for form */
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        #card-element {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background: white;
+            margin-top: 10px;
+        }
+        #submit-button {
+            background-color: #00a676;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="payment-form">
+            <div id="card-element">
+                <!-- Stripe Elements will go here -->
             </div>
-            <!-- Section with buttons -->
-            <div class = "wrapper">
-                <div style="text-align: center">
-                    <button onclick="location.href='shop.html'" class="button button1">BUY NOW</button>
-                    <button onclick="location.href='blog.html'" class="button button2">BLOG</button>
-                </div>
-            </div>
-        </div>
-        <nav id="footer">
-            <div class="footerTop">
-                <div class="navItem">
-                    <a href="index.html" class="navTitle">Contact Us</a>
-                    <a href="shop.html" class="navTitle">FAQ</a>
-                    <a href="blog.html" class="navTitle">Orders</a>
-                </div>
-            </div>
-        </nav>
+            <button id="submit-button">Submit Payment</button>
+        </form>
+    </div>
 
+    <div id="card-errors" role="alert"></div>
     </body>
     <!-- Javascript -->
-    <script src="MASK.js"></script>
-    <script src="checkout.js"></script>
+
     <script src="cartUpdate.js"></script>
+    <script src="MASK.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
 </html>
+
+
+
+

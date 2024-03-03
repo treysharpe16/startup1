@@ -64,6 +64,9 @@ nav {
   font-size: 20px;
   cursor: pointer;
 }
+.navImage {
+  height:70px;
+}
 
 /* NAVIGATION BAR STYLES */
 footer{
@@ -243,7 +246,7 @@ img{
     top: 0;
     right: 0;
     right: -100%; 
-    width: 25vw;
+    width: 400px;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -596,6 +599,26 @@ span.price {
   cursor: pointer;
 }
 
+#card-element {
+  color:white;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+#card-errors {
+  color: #fa755a;
+  margin-top: 10px;
+}
+
+
+
+
+
+
 @media(max-width:750px){
 .wrapperItem {
   font-size:30px;
@@ -605,8 +628,40 @@ span.price {
   padding-left: 5px;
   padding-right: 5px;
 }
-.nav {
-  padding-right: 5px;
-  padding-left: 5px;
+nav {
+  background-color: #000;
+  color: white;
+  padding: 10px 10px;
+  height: 10vh;
 }
+.navImage {
+  height:50px;
 }
+.navItem {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wrapper {
+  padding-top: 0px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.cart{
+  width: 80vw;
+  /* height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: grey;
+  box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
+  border: 1px solid white;
+  transition: 1.5s;
+  z-index: 100; */
+}
+
+}
+
